@@ -9,9 +9,11 @@ from the base folder of the project run:
 docker build -t dlc_gpu .
 
 once it has finished building the container run:
-docker run --rm --gpus=all -v ./Out_videos:./Out_videos dlc_gpu 
+docker run --rm --gpus=all -v ./Out_Videos:/Out_Videos -v ./In_Videos:/app/In_Videos dlc_gpu
 
 This will analyze the video and save files to the "Out_Videos" directory. This includes the csv file breaking down each frame of the video to a pose position as well as the h5 model file and the video file
+
+Any future videos can be placed into the "In_Videos" folder and the above docker run command will analyze them as well.
 
 install the requirements from the requirements.txt file
 
