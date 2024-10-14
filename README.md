@@ -2,14 +2,11 @@ Place videos to be analyzed in the "In_Videos" folder
 
 Ensure you have docker installed. If not refer to the docker documentation for installation on your system.
 Download and copy the docker image liked here into the base folder of this project.
-Run docker load < piglets.tar.gz 
+Run docker pull cotekevan/piglet_tracker:version1
 To load the image into your docker local directory
 
-from the base folder of the project run:
-docker build -t dlc_gpu .
-
 once it has finished building the container run:
-docker run --rm --gpus=all -v ./Out_Videos:/Out_Videos -v ./In_Videos:/app/In_Videos dlc_gpu
+docker run --rm --gpus=all -v ./Out_Videos:/Out_Videos -v ./In_Videos:/app/In_Videos cotekevan/piglet_tracker:version1
 
 This will analyze the video and save files to the "Out_Videos" directory. This includes the csv file breaking down each frame of the video to a pose position as well as the h5 model file and the video file
 
