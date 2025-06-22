@@ -1,7 +1,7 @@
 Place videos to be analyzed in the "In_Videos" folder
 
 Ensure you have docker installed. If not refer to the docker documentation for installation on your system.
-Download and copy the docker image liked here into the base folder of this project.
+Download and copy the docker image linked here into the base folder of this project.
 Run docker pull cotekevan/piglet_tracker:version1
 To load the image into your docker local directory
 
@@ -22,6 +22,6 @@ This will prompt you to answer a few questions:
 
 'Enter the width of the pen in cm' is the distance from the piglets left to right as they enter the pen. Note: in our case this was the frame orientation top to bottom distance since the entry was from the right
 
-'Enter the buffer zone distance from object in cm' is the buffer radius around each object to count as an interraction. For the reference paper we used 22 cm
+'Enter the buffer zone distance from object in cm' is the buffer radius around each object to count as an interraction. In the paper we used 22 cm
 
-An output csv will be created called output.csv which includes all of the reported statistics from the referenced paper. There is also an included output_breakdown.csv which lists each interaction point and the time at which is happened
+An output csv will be created called output.csv which includes all of the reported statistics from the referenced paper. There is also an included output_breakdown.csv which lists each interaction point and the time at which it happened
